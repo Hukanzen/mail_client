@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 # -*- coding: utf-8 -*-
 #
 #   imap_get.py
@@ -39,12 +39,12 @@ try:
         tmp_msg = email.message_from_string(
             data[0][1].decode('utf-8'))
         tmp_subject = tmp_msg.get('Subject')
+        print(tmp_subject)
 
-        if re.match(tmp_subject, 'utf-8'):
+        if re.search('utf-8', tmp_subject):
             encoding = 'utf-8'
         else:
             encoding = 'iso-2022-jp-ext'
-            # encoding = 'shift_jis'
 
         print(encoding)
         email_message = email.message_from_string(

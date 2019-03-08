@@ -12,5 +12,8 @@ export MPass=pass
 ```
 cd src
 sh ACCOUNT.env
-perl main.py
+python3 main.py
 ```
+
+## Warn !
+You must use Python'3' !
